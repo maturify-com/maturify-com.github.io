@@ -92,7 +92,7 @@
       }
 
       .slider-content-text {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         line-height: 1.3;
         opacity: 0.7;
         padding: 0 10%;
@@ -340,7 +340,7 @@
 
   .slides-item {
     display: table-cell;
-    padding: 0px 46px;
+    padding: 0px 35px;
     position: relative;
     z-index: 1;
 
@@ -365,7 +365,7 @@
         -ms-transform: translate(0, -50%);
 
         .slides-title {
-          font-size: 26px;
+          font-size: 20px;
           line-height: 30px;
           color: $white-color;
           text-transform: capitalize;
