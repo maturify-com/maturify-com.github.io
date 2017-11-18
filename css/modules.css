@@ -1818,13 +1818,14 @@
   overflow: hidden;
   box-shadow: 0 14px 32px 10px rgba(0, 0, 0, 0.2);
   margin: 0 15px;
-  border-radius: 10px; }
-  .pricing-tables .pricing-tables-wrap :nth-child(3) .pricing-tables-item .dots {
+  border-radius: 10px;
+  padding: 40px 0; }
+  .pricing-tables .pricing-tables-wrap :nth-child(4) .pricing-tables-item .dots {
     display: none; }
 
 .pricing-tables-item {
   text-align: center;
-  padding: 60px;
+  padding: 10px;
   position: relative; }
   @media (max-width: 1024px) {
     .pricing-tables-item {
@@ -1833,7 +1834,8 @@
     .pricing-tables-item {
       margin-bottom: 30px; } }
   .pricing-tables-item:hover .btn {
-    background-color: #4cc2c0; }
+    background-color: #4cc2c0;
+    color: #f7f9f9; }
   .pricing-tables-item:hover .pricing-title {
     color: #4cc2c0; }
   .pricing-tables-item .pricing-tables-icon {
@@ -2039,10 +2041,11 @@
   .subscribe .subscribe-title {
     font-size: 30px;
     color: #fff;
-    margin-bottom: 23px; }
+    margin-bottom: 3px; }
   .subscribe .sub-title {
     color: rgba(255, 255, 255, 0.5);
-    float: left; }
+    float: left;
+    margin-bottom: 20px; }
   .subscribe .subscribe-form {
     margin-bottom: 25px; }
     .subscribe .subscribe-form .email {

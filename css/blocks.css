@@ -464,7 +464,8 @@
 /*------------- Block with info-box --------------*/
 .background-mountains {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 20px; }
   .background-mountains .heading {
     margin-bottom: 76px; }
     @media (max-width: 800px) {
@@ -585,8 +586,7 @@
       .testimonial-item .testimonial__thumb {
         padding: 70px 20px; } }
   .testimonial-item .testimonial-content .text {
-    color: #fff;
-    font-size: 24px; }
+    color: #fff; }
     @media (max-width: 980px) {
       .testimonial-item .testimonial-content .text {
         font-size: 20px; } }

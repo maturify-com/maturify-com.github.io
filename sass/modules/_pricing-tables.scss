@@ -9,8 +9,9 @@
     box-shadow: 0 14px 32px 10px rgba(0, 0, 0, .2);
     margin: 0 15px;
     border-radius: 10px;
+    padding: 40px 0;
 
-    :nth-child(3) .pricing-tables-item .dots {
+    :nth-child(4) .pricing-tables-item .dots {
       display: none;
     }
 
@@ -19,7 +20,7 @@
 
 .pricing-tables-item {
   text-align: center;
-  padding: 60px;
+  padding: 10px;
   position: relative;
 
   @media (max-width: 1024px) {
@@ -33,6 +34,7 @@
   &:hover {
     .btn {
       background-color: $primary-color;
+      color: $border-color;
     }
 
     .pricing-title {
