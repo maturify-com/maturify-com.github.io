@@ -240,6 +240,14 @@
   padding-bottom: 30px;
 }
 
+.mt30 {
+  margin-top: 30px;
+
+  @media (max-width: 800px) {
+    margin-top: 15px;
+  }
+}
+
 .mt60 {
   margin-top: 60px;
 

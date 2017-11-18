@@ -1132,7 +1132,7 @@
   .testimonial-slider .testimonial-img {
     position: absolute;
     bottom: -200px;
-    left: 40%;
+    left: 35%;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0); }
@@ -1481,15 +1481,14 @@
     text-align: center;
     margin: 0 auto;
     position: relative;
-    z-index: 5;
-    top: 100px; }
+    z-index: 5; }
   .seo-score .video-control {
     margin-bottom: 40px;
     display: block; }
   .seo-score .seo-score-content {
     z-index: 2;
     position: relative;
-    padding: 150px; }
+    padding: 100px 0 50px 0px; }
     .seo-score .seo-score-content .heading .heading-title {
       font-size: 36px;
       color: #fff;
@@ -2142,7 +2141,10 @@
       .footer .info .heading .heading-text {
         font-size: 16px;
         line-height: 1.6;
-        opacity: .4; }
+        opacity: .4;
+        padding: 0 0; }
+        .footer .info .heading .heading-text a {
+          color: #f15b26; }
     .footer .info .services ul {
       width: 50%;
       float: left;

@@ -603,6 +603,12 @@ input {
 .pb30 {
   padding-bottom: 30px; }
 
+.mt30 {
+  margin-top: 30px; }
+  @media (max-width: 800px) {
+    .mt30 {
+      margin-top: 15px; } }
+
 .mt60 {
   margin-top: 60px; }
   @media (max-width: 800px) {

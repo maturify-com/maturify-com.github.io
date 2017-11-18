@@ -20,7 +20,6 @@
     margin: 0 auto; 
     position: relative; 
     z-index: 5;
-    top: 100px;
   }
 
   .video-control {
@@ -31,7 +30,7 @@
   .seo-score-content {
     z-index: 2;
     position: relative;
-    padding: 150px;
+    padding: 100px 0 50px 0px;
 
     .heading {
       .heading-title {
