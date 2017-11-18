@@ -728,7 +728,7 @@
 .main-slider {
   position: relative;
   cursor: pointer;
-  padding-bottom: 130px;
+  padding-bottom: 104px;
   text-align: center; }
   .main-slider .swiper-slide {
     /* Center slide text vertically */
@@ -748,7 +748,7 @@
   .main-slider .main-slider-bg-dark .slider-content .slider-content-title {
     color: #fff;
     font-size: 40px;
-    padding-top: 50px; }
+    padding-top: 20px; }
   .main-slider .main-slider-bg-dark .slider-content .slider-content-text {
     color: #fff;
     opacity: 1; }
@@ -786,12 +786,14 @@
     .main-slider .slider-content .slider-content-title-highlight {
       color: #4cc2c0; }
     .main-slider .slider-content .slider-content-text {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       line-height: 1.3;
-      opacity: 0.7; }
+      opacity: 0.7;
+      font-size: 20px;
+      padding: 0 20%; }
   .main-slider .slider-thumb {
     overflow: hidden;
-    padding: 20px 15px 0; }
+    padding: 10px 15px 0; }
     @media (max-width: 768px) {
       .main-slider .slider-thumb {
         height: auto;
@@ -933,7 +935,7 @@
   width: 100%; }
   .slider-slides .slides-item {
     display: table-cell;
-    padding: 13px 46px;
+    padding: 0px 46px;
     position: relative;
     z-index: 1; }
     @media (max-width: 1024px) {

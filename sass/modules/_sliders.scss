@@ -4,7 +4,7 @@
 .main-slider {
   position: relative;
   cursor: pointer;
-  padding-bottom: 130px;
+  padding-bottom: 104px;
   text-align: center;
 
   .swiper-slide{
@@ -28,7 +28,7 @@
       .slider-content-title {
         color: $white-color;
         font-size: 40px;
-        padding-top: 50px;
+        padding-top: 20px;
       }
       .slider-content-text {
         color: $white-color;
@@ -92,16 +92,18 @@
       }
 
       .slider-content-text {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         line-height: 1.3;
         opacity: 0.7;
+        font-size: 20px;
+        padding: 0 20%;
       }
 
     }
 
   .slider-thumb {
     overflow: hidden;
-    padding: 20px 15px 0;
+    padding: 10px 15px 0;
 
     @media (max-width: 768px) {
       height: auto;
@@ -339,7 +341,7 @@
 
   .slides-item {
     display: table-cell;
-    padding: 13px 46px;
+    padding: 0px 46px;
     position: relative;
     z-index: 1;
 
