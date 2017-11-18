@@ -781,6 +781,10 @@
     .main-slider .slider-content .slider-content-title {
       margin-bottom: 20px;
       line-height: 1.3; }
+    .main-slider .slider-content .slider-content-title-primary {
+      margin-top: 40px; }
+    .main-slider .slider-content .slider-content-title-highlight {
+      color: #4cc2c0; }
     .main-slider .slider-content .slider-content-text {
       margin-bottom: 40px;
       line-height: 1.3;
