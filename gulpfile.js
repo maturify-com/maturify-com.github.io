@@ -6,7 +6,7 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var coffee = require('gulp-coffee');
-
+var nunjucksRender = require('gulp-nunjucks-render');
 
 /*===========Compile SCSS==============*/
 
@@ -48,6 +48,8 @@ gulp.task('sass', function() {
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
     gulp.watch('sass/**/*.scss', ['sass']);
+    gulp.watch('templates/**/*.nunjucks', ['nunjucks']);
+    gulp.watch('pages/**/*.nunjucks', ['nunjucks']);
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 
@@ -204,12 +206,27 @@ gulp.task('clean', function(callback) {
 })
 
 
+
+/*============= nunjucks templates ==============*/
+
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: ['templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest('.'))
+});
+
+
 /*=============Join tasks==============*/
 
 var runSequence = require('run-sequence');
 
 gulp.task('default', function(callback) {
-    runSequence(['sass', 'browserSync', 'watch'],
+    runSequence(['nunjucks', 'sass', 'browserSync', 'watch'],
         callback
     )
 })
