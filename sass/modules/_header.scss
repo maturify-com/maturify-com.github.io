@@ -285,13 +285,22 @@
   transform: scale(1);
 
   @media (max-width: 768px) {
-    bottom: -51px;
-    width: 50px;
+    bottom: 4px;
+    right: 42px;
+    width: 48px;
     height: 50px;
   }
 
   @media (max-width: 570px) {
-    display: none;
+    /*display: none;*/
+  }
+
+  @media (max-width: 520px) {
+    margin-right: -40px;
+  }
+
+   @media (max-width: 480px) {
+    margin-right: -40px;
   }
 
   .user-menu-content {
@@ -309,7 +318,12 @@
     @media (max-width: 768px) {
       width: 44px;
       height: 44px;
+      font-size: 12px;
       border-width: 2px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 11px;
     }
 
     span {

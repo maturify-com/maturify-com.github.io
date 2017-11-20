@@ -114,7 +114,7 @@
                 </nav>
 
                 <div class="user-menu open-overlay">
-                    <a href="#" class="user-menu-content  js-open-aside">Login
+                    <a href="https://app.maturify.com/" class="user-menu-content">Login
                         <span></span>
                     </a>
                 </div>
