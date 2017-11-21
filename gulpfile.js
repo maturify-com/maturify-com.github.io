@@ -11,26 +11,27 @@ var nunjucksRender = require('gulp-nunjucks-render');
 /*===========Compile SCSS==============*/
 
 var sass = require('gulp-sass');
+var lec = require('gulp-line-ending-corrector')
 
 gulp.task('sass', function() {
 
-    gulp.src('sass/base/*.scss')
+    gulp.src('sass/base/*.scss').pipe(lec())
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('sass/blocks/*.scss')
+    gulp.src('sass/blocks/*.scss').pipe(lec())
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('sass/layouts/*.scss')
+    gulp.src('sass/layouts/*.scss').pipe(lec())
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('sass/modules/*.scss')
+    gulp.src('sass/modules/*.scss').pipe(lec())
         .pipe(sass())
         .pipe(gulp.dest('css'));
     
-    gulp.src('sass/widgets/*.scss')
+    gulp.src('sass/widgets/*.scss').pipe(lec())
         .pipe(sass())
         .pipe(gulp.dest('css'))
 
