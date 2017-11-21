@@ -196,6 +196,18 @@
   }
 }
 
+.pt200 {
+  padding-top: 200px;
+
+  @media (max-width: 1024px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+}
+
 .pt400 {
   padding-top: 400px;
 
