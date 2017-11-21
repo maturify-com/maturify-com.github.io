@@ -1,10 +1,9 @@
 <!-- index.nunjucks -->
+{% set page = 'home' %}
 {% extends "layout.nunjucks" %}
 
 
 {% block content %}
-
-
 <div class="content-wrapper">
     <div class="header-spacer"></div>
     <!-- Main Slider -->
