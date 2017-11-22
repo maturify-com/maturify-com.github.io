@@ -534,15 +534,42 @@
   .offers .heading .heading-text {
     margin-bottom: 31px;
     color: #2f2c2c; }
+  @media (max-width: 1200px) {
+    .offers .heading {
+      width: 60%; } }
+  @media (max-width: 585px) {
+    .offers .heading {
+      width: 100%; } }
   @media (max-width: 1024px) {
     .offers .offers-thumb {
       margin-top: 35px; } }
+  @media (max-width: 1200px) {
+    .offers .offers-thumb {
+      position: absolute;
+      margin-top: -462px;
+      margin-left: 581px; } }
+  @media (max-width: 991px) {
+    .offers .offers-thumb {
+      position: absolute;
+      margin-top: -442px;
+      margin-left: 412px; } }
+  @media (max-width: 585px) {
+    .offers .offers-thumb {
+      position: inherit;
+      margin-top: 0px;
+      margin-left: 0px; } }
   .offers .list {
     padding-left: 60px;
     margin-bottom: 45px; }
+    @media (max-width: 1200px) {
+      .offers .list {
+        width: 60%; } }
     @media (max-width: 640px) {
       .offers .list {
         padding-left: 32px; } }
+    @media (max-width: 585px) {
+      .offers .list {
+        width: 100%; } }
   @media (max-width: 1024px) {
     .offers .btn {
       margin-bottom: 20px; } }
