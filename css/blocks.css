@@ -1734,7 +1734,8 @@ body.author .blog-details-author {
   position: relative; }
   @media (max-width: 1024px) {
     .local-seo img {
-      width: 70%; } }
+      width: 70%;
+      margin-top: -62px; } }
   .local-seo img:last-child {
     position: absolute;
     bottom: -120px;
