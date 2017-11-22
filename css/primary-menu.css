@@ -851,6 +851,7 @@ License: http://codecanyon.net/licenses
 	.primary-menu-responsive.primary-menu .showhide {
 		float: left;
 		padding-right: 0;
+		padding-left: 15px;
 	}
 }
 
