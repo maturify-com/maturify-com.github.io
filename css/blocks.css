@@ -48,6 +48,9 @@
     .btn-medium {
       padding: 15px 25px;
       font-size: 13px; } }
+  @media (max-width: 381px) {
+    .btn-medium {
+      font-size: 9px; } }
 
 .btn-large {
   padding: 27px 64px;
