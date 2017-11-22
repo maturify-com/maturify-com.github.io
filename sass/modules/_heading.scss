@@ -14,6 +14,14 @@
     &.no-margin {
       margin: 0;
     }
+
+    @media (max-width: 1024px) {
+        margin-top: -93px;
+      }
+
+    @media (max-width: 800px) {
+        margin-top: 0px;
+      }
   }
 
   .heading-line {

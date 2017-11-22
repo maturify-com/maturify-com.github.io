@@ -10,6 +10,12 @@
     margin-bottom: 20px; }
     .heading .heading-title.no-margin {
       margin: 0; }
+    @media (max-width: 1024px) {
+      .heading .heading-title {
+        margin-top: -93px; } }
+    @media (max-width: 800px) {
+      .heading .heading-title {
+        margin-top: 0px; } }
   .heading .heading-line {
     margin-bottom: 20px;
     position: relative; }
