@@ -57,7 +57,7 @@
       text-align: center;
 
       @media (max-width: 1024px) {
-        padding: 19px 6px 22px;
+        padding: 16px 6px 22px;
         font-size: 13px;
       }
 
@@ -66,6 +66,18 @@
         .semicircle--right {
           display: none;
         }
+      }
+
+      @media (max-width: 800px) {
+        padding: 16px 6px 22px;
+        font-size: 13px;
+        margin-top: 43px;
+      }
+
+      @media (max-width: 676px) {
+        padding: 16px 6px 22px;
+        font-size: 13px;
+        margin-top: 0px;
       }
 
       @media (max-width: 360px) {
