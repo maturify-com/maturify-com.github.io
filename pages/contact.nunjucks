@@ -1,8 +1,0 @@
-<!-- index.nunjucks -->
-{% extends "layout.nunjucks" %}
-
-
-{% block content %}
-
- <h1>contacts</h1>
-{% endblock %}

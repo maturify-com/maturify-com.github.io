@@ -52,6 +52,7 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "del": "^2.2.2"
+    "del": "^2.2.2",
+    "gulp-line-ending-corrector": "^1.0.1"
   }
 }
