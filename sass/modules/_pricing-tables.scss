@@ -94,6 +94,11 @@
     font-size: 24px;
     color: $primary-color;
     margin-bottom: 31px;
+
+    @media (max-width: 381px) {
+      margin-bottom: 10px;
+      margin-top: -10px;
+    }
   }
 
   .dots {

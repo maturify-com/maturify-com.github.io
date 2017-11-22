@@ -1970,6 +1970,10 @@
     font-size: 24px;
     color: #4cc2c0;
     margin-bottom: 31px; }
+    @media (max-width: 381px) {
+      .pricing-tables-item .rate {
+        margin-bottom: 10px;
+        margin-top: -10px; } }
   .pricing-tables-item .dots {
     position: absolute;
     top: 50%;
