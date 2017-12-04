@@ -325,7 +325,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'browserSync', 'watch'],
+        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist'],
         callback
     )
 })
