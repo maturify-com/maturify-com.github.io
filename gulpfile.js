@@ -312,6 +312,14 @@ gulp.task('nunjucks_dist', function() {
     .pipe(gulp.dest('dist/'))
   });
 
+  var htmlmin = require('gulp-htmlmin');
+
+  gulp.task('minifyhtml', function() {
+    return gulp.src('dist/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist/'))
+  })
+
 /*=============Join tasks==============*/
 
 var runSequence = require('run-sequence');
@@ -325,7 +333,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist'],
+        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
         callback
     )
 })
