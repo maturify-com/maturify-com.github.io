@@ -9,6 +9,7 @@ var coffee = require('gulp-coffee');
 var nunjucksRender = require('gulp-nunjucks-render');
 var minifyjs = require('gulp-uglify');
 var concat = require('gulp-concat');
+var minify_css = require('gulp-clean-css');
 
 /*===========Compile SCSS==============*/
 
@@ -64,6 +65,7 @@ gulp.task('minifyjs', function(){
 
 /* =========Combine JS ========== */
 
+/*Dev Files*/
 gulp.task('concat', function() {
     return gulp.src(['js/jquery-2.1.4.min.js',
                     'js/crum-mega-menu.js',
@@ -77,6 +79,12 @@ gulp.task('concat', function() {
                     ])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('js/combined'))
+});
+
+/*Prod Files*/
+gulp.task('concat_dist', function() {
+    return gulp.src('js/combined/**/*')
+    .pipe(gulp.dest('dist/js/combined'))
 });
 
 /*===========Watch==============*/
@@ -171,10 +179,32 @@ gulp.task('useref', function(){
         .pipe(gulp.dest('dist'))
 });
 
+/*===========Minify CSS Dev==============*/
 
-/*===========Minify CSS==============*/
+gulp.task('minify_css', function(){
+    return gulp.src(['css/fonts.css',
+                     'css/crumina-fonts.css',
+                     'css/normalize.css',
+                     'css/grid.css',
+                     'css/base.css',
+                     'css/blocks.css',
+                     'css/layouts.css',
+                     'css/modules.css',
+                     'css/widgets-styles.css',
+                     'css/jquery.mCustomScrollbar.min.css',
+                     'css/swiper.min.css',
+                     'css/primary-menu.css',
+                     'css/magnific-popup.css',
+                     'fonts/**/*'
+                    ])
+    .pipe(gulpIf('*.css', minify_css()))                
+    .pipe(gulp.dest('css/minified/'))
+    .pipe(gulpIf('!*.css', gulp.dest('css/fonts/')))
+})
 
-var minifyCSS = require('gulp-minify-css');
+/*===========Minify CSS Prod ==============*/
+
+/*var minifyCSS = require('gulp-minify-css');
 
 gulp.task('useref', function(){
     var assets = useref.assets();
@@ -187,7 +217,19 @@ gulp.task('useref', function(){
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest('dist'))
-});
+});*/
+
+gulp.task('minify_css_dist', function(){
+    return gulp.src('css/minified/**/*')
+    .pipe(gulp.dest('dist/css/minified/'))
+})
+
+
+/*==================Copy minified relevant fonts=========================*/
+gulp.task('minify_css_fonts_dist', function(){
+    return gulp.src('css/fonts/**/*')
+    .pipe(gulp.dest('dist/css/fonts/'))
+})
 
 
 /*===========Minimization IMAGE==============*/
@@ -245,6 +287,7 @@ gulp.task('clean', function(callback) {
 
 /*============= nunjucks templates ==============*/
 
+/*============= Dev files ==============*/
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('pages/**/*.+(html|nunjucks)')
@@ -256,6 +299,18 @@ gulp.task('nunjucks', function() {
   .pipe(gulp.dest('.'))
 });
 
+/*============= Prod files ==============*/
+
+gulp.task('nunjucks_dist', function() {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('pages/**/*.+(html|nunjucks)')
+    // Renders template with nunjucks
+    .pipe(nunjucksRender({
+        path: ['templates']
+      }))
+    // output files in app folder
+    .pipe(gulp.dest('dist/'))
+  });
 
 /*=============Join tasks==============*/
 
@@ -269,8 +324,8 @@ gulp.task('default', function(callback) {
 
 gulp.task('build', function(callback) {
     runSequence(
-        'clean:dist',
-        ['sass', 'useref', 'images', 'fonts'],
+        //'clean:dist',
+        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'browserSync', 'watch'],
         callback
     )
 })

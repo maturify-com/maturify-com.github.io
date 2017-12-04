@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Maturify</title>
 
-    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/crumina-fonts.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -13,13 +13,30 @@
     <link rel="stylesheet" type="text/css" href="css/blocks.css">
     <link rel="stylesheet" type="text/css" href="css/layouts.css">
     <link rel="stylesheet" type="text/css" href="css/modules.css">
-    <link rel="stylesheet" type="text/css" href="css/widgets-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/widgets-styles.css">-->
+
+    <!-- Minified CSS -->
+    <link rel="stylesheet" type="text/css" href="css/minified/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/crumina-fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/base.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/blocks.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/layouts.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/modules.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/widgets-styles.css">
 
     <!--Plugins styles-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/primary-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">-->
+
+    <!-- Plugins styles minified css-->
+    <link rel="stylesheet" type="text/css" href="css/minified/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/primary-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/minified/magnific-popup.css">
 
     <!--Styles for RTL-->
     <!--<link rel="stylesheet" type="text/css" href="css/rtl.css">-->
