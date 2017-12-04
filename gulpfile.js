@@ -7,6 +7,8 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var coffee = require('gulp-coffee');
 var nunjucksRender = require('gulp-nunjucks-render');
+var minifyjs = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 /*===========Compile SCSS==============*/
 
@@ -43,6 +45,39 @@ gulp.task('sass', function() {
 
 });
 
+/* =========Minify JS ========== */
+
+gulp.task('minifyjs', function(){
+    return gulp.src(['js/jquery-2.1.4.min.js',
+                     'js/crum-mega-menu.js',
+                     'js/swiper.jquery.min.js',
+                     'js/theme-plugins.js',
+                     'js/main.js',
+                     'js/form-actions.js',
+                     'js/velocity.min.js',
+                     'js/ScrollMagic.min.js',
+                     'js/animation.velocity.min.js',
+                    ])
+    .pipe(uglify())
+    .pipe(gulp.dest('js/minified'))
+});
+
+/* =========Combine JS ========== */
+
+gulp.task('concat', function() {
+    return gulp.src(['js/jquery-2.1.4.min.js',
+                    'js/crum-mega-menu.js',
+                    'js/swiper.jquery.min.js',
+                    'js/theme-plugins.js',
+                    'js/main.js',
+                    'js/form-actions.js',
+                    'js/velocity.min.js',
+                    'js/ScrollMagic.min.js',
+                    'js/animation.velocity.min.js',
+                    ])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('js/combined'))
+});
 
 /*===========Watch==============*/
 
