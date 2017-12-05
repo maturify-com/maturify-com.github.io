@@ -274,6 +274,11 @@ gulp.task('webpimg_copytodest', function() {
         .pipe(gulp.dest('dist/img/webp'));
 });
 
+gulp.task('svg_copytodest', function() {
+    gulp.src('svg/**/*')
+        .pipe(gulp.dest('dist/svg/'));
+});
+
 /*=============Copy Fonts==============*/
 
 gulp.task('fonts', function() {
@@ -346,7 +351,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['compressingtowebp', 'webpimg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
+        ['compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
         callback
     )
 })
