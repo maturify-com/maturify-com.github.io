@@ -647,7 +647,7 @@
       color: #3b3432; }
   .testimonial-item .avatar {
     position: absolute;
-    background-image: url("../img/avatar-bg.png");
+    background-image: url("../img/webp/avatar-bg.webp");
     width: 119px;
     height: 112px;
     line-height: 112px;
@@ -1343,65 +1343,65 @@ body.author .blog-details-author {
 
 /*------------- #Any colors background --------------*/
 .stunning-header-bg-blue {
-  background-image: url("../img/pattern-bg-blue.jpg"); }
+  background-image: url("../img/webp/pattern-bg-blue.webp"); }
 
 .stunning-header-bg-gray {
-  background-image: url("../img/pattern-bg-gray.jpg"); }
+  background-image: url("../img/webp/pattern-bg-gray.webp"); }
 
 .stunning-header-bg-lightblue {
-  background-image: url("../img/pattern-bg-lightblue.jpg"); }
+  background-image: url("../img/webp/pattern-bg-lightblue.webp"); }
 
 .stunning-header-bg-violet {
-  background-image: url("../img/pattern-bg-violet.jpg"); }
+  background-image: url("../img/webp/pattern-bg-violet.webp"); }
 
 .stunning-header-bg-lightgray {
-  background-image: url("../img/pattern-bg-lightgray.jpg"); }
+  background-image: url("../img/webp/pattern-bg-lightgray.webp"); }
 
 .stunning-header-bg-breez {
-  background-image: url("../img/pattern-bg-breez.jpg"); }
+  background-image: url("../img/webp/pattern-bg-breez.webp"); }
 
 .stunning-header-bg-red {
-  background-image: url("../img/pattern-bg-red.jpg"); }
+  background-image: url("../img/webp/pattern-bg-red.webp"); }
 
 .stunning-header-bg-orange {
-  background-image: url("../img/pattern-bg-orange.jpg"); }
+  background-image: url("../img/webp/pattern-bg-orange.webp"); }
 
 .stunning-header-bg-green {
-  background-image: url("../img/pattern-bg-green.jpg"); }
+  background-image: url("../img/webp/pattern-bg-green.webp"); }
 
 .stunning-header-bg-olive {
-  background-image: url("../img/pattern-bg-olive.jpg"); }
+  background-image: url("../img/webp/pattern-bg-olive.webp"); }
 
 .stunning-header-bg-brown {
-  background-image: url("../img/pattern-bg-brown.jpg"); }
+  background-image: url("../img/webp/pattern-bg-brown.webp"); }
 
 .stunning-header-bg-rose {
-  background-image: url("../img/pattern-bg-rose.jpg"); }
+  background-image: url("../img/webp/pattern-bg-rose.webp"); }
 
 .stunning-header-bg-lightviolet {
-  background-image: url("../img/pattern-bg-lightviolet.jpg"); }
+  background-image: url("../img/webp/pattern-bg-lightviolet.webp"); }
 
 .stunning-header-bg-lime {
-  background-image: url("../img/pattern-bg-lime.jpg"); }
+  background-image: url("../img/webp/pattern-bg-lime.webp"); }
 
 /*------------- #Any photos background --------------*/
 .stunning-header-bg-photo1 {
-  background: url("../img/stunning-header-photo1.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo1.webp") no-repeat; }
 
 .stunning-header-bg-photo2 {
-  background: url("../img/stunning-header-photo2.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo2.webp") no-repeat; }
 
 .stunning-header-bg-photo3 {
-  background: url("../img/stunning-header-photo3.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo3.webp") no-repeat; }
 
 .stunning-header-bg-photo4 {
-  background: url("../img/stunning-header-photo4.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo4.webp") no-repeat; }
 
 .stunning-header-bg-photo5 {
-  background: url("../img/stunning-header-photo5.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo5.webp") no-repeat; }
 
 .stunning-header-bg-photo6 {
-  background: url("../img/stunning-header-photo6.jpg") no-repeat; }
+  background: url("../img/webp/stunning-header-photo6.webp") no-repeat; }
 
 /*------------- #Any overlays background --------------*/
 .overlay-dark {

@@ -10,6 +10,7 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var minifyjs = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minify_css = require('gulp-clean-css');
+var imagewebp = require('gulp-webp');
 
 /*===========Compile SCSS==============*/
 
@@ -260,6 +261,18 @@ gulp.task('compress', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
+/*===========Minimization IMAGE to WEBP Format==============*/
+
+gulp.task('compressingtowebp', function() {
+    gulp.src('img/**/*.+(png|jpg|gif|svg)')
+        .pipe(imagewebp())
+        .pipe(gulp.dest('img/webp'));
+});
+
+gulp.task('webpimg_copytodest', function() {
+    gulp.src('img/webp/**/*')
+        .pipe(gulp.dest('dist/img/webp'));
+});
 
 /*=============Copy Fonts==============*/
 
@@ -325,7 +338,7 @@ gulp.task('nunjucks_dist', function() {
 var runSequence = require('run-sequence');
 
 gulp.task('default', function(callback) {
-    runSequence(['nunjucks', 'sass', 'browserSync', 'watch'],
+    runSequence(['compressingtowebp', 'sass', 'nunjucks', 'browserSync', 'watch'],
         callback
     )
 })
@@ -333,7 +346,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
+        ['compressingtowebp', 'webpimg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
         callback
     )
 })

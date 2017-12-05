@@ -1623,7 +1623,7 @@
       display: block; } }
   .our-video .video {
     min-height: 500px;
-    background: url("../img/video2.png") no-repeat 50% 50%, #3cb878;
+    background: url("../img/webp/video2.webp") no-repeat 50% 50%, #3cb878;
     background-size: contain; }
     .our-video .video .video-control {
       position: absolute;
@@ -2104,7 +2104,7 @@
     margin-bottom: 20px;
     position: relative;
     display: block;
-    background-image: url("../img/load-more-arrow.png");
+    background-image: url("../img/webp/load-more-arrow.webp");
     background-position: 54% 50%;
     background-repeat: no-repeat; }
     .load-more .load-more-img-wrap img {
