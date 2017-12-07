@@ -719,7 +719,7 @@
                         <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
                             <h4 class="subscribe-title">Tips and Tricks!</h4>
                             <div class="sub-title">Receive best practices in corporate learning management.</div>
-                            <form class="subscribe-form" method="post" action="import.php">
+                            <form class="subscribe-form" method="post" action="">
                                 <input class="email input-standard-grey input-white" name="email" required="required" placeholder="Your Email Address" type="email">
                                 <button class="subscr-btn">subscribe
                                     <span class="semicircle--right"></span>
