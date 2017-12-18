@@ -58,8 +58,7 @@ gulp.task('minifyjs', function(){
                      'src/js/form-actions.js',
                      'src/js/velocity.min.js',
                      'src/js/ScrollMagic.min.js',
-                     'src/js/animation.velocity.min.js',
-                     'src/js/ajax-contactform-submit.js'
+                     'src/js/animation.velocity.min.js'
                     ])
     .pipe(uglify())
     .pipe(gulp.dest('src/js/minified'))
@@ -77,8 +76,7 @@ gulp.task('concat', function() {
                     'src/js/minified/form-actions.js',
                     'src/js/minified/velocity.min.js',
                     'src/js/minified/ScrollMagic.min.js',
-                    'src/js/minified/animation.velocity.min.js',
-                    'src/js/minified/ajax-contactform-submit.js'
+                    'src/js/minified/animation.velocity.min.js'
                     ])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('src/js/combined'))
