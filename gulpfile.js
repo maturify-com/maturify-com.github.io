@@ -59,6 +59,7 @@ gulp.task('minifyjs', function(){
                      'src/js/velocity.min.js',
                      'src/js/ScrollMagic.min.js',
                      'src/js/animation.velocity.min.js',
+                     'src/js/ajax-contactform-submit.js'
                     ])
     .pipe(uglify())
     .pipe(gulp.dest('src/js/minified'))
@@ -68,15 +69,16 @@ gulp.task('minifyjs', function(){
 
 /*Dev Files*/
 gulp.task('concat', function() {
-    return gulp.src(['src/js/jquery-2.1.4.min.js',
-                    'src/js/crum-mega-menu.js',
-                    'src/js/swiper.jquery.min.js',
-                    'src/js/theme-plugins.js',
-                    'src/js/main.js',
-                    'src/js/form-actions.js',
-                    'src/js/velocity.min.js',
-                    'src/js/ScrollMagic.min.js',
-                    'src/js/animation.velocity.min.js',
+    return gulp.src(['src/js/minified/jquery-2.1.4.min.js',
+                    'src/js/minified/crum-mega-menu.js',
+                    'src/js/minified/swiper.jquery.min.js',
+                    'src/js/minified/theme-plugins.js',
+                    'src/js/minified/main.js',
+                    'src/js/minified/form-actions.js',
+                    'src/js/minified/velocity.min.js',
+                    'src/js/minified/ScrollMagic.min.js',
+                    'src/js/minified/animation.velocity.min.js',
+                    'src/js/minified/ajax-contactform-submit.js'
                     ])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('src/js/combined'))
@@ -343,7 +345,7 @@ gulp.task('nunjucks_dist', function() {
 var runSequence = require('run-sequence');
 
 gulp.task('default', function(callback) {
-    runSequence(['compressingtowebp', 'sass', 'nunjucks', 'browserSync', 'watch'],
+    runSequence(['compressingtowebp', 'sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch'],
         callback
     )
 })
@@ -351,7 +353,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
+        ['compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
         callback
     )
 })
