@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <form class="contact-form" method="post" action="https://3nlzc3tvtd.execute-api.us-east-2.amazonaws.com/dev/contacts">
+        <form class="contact-form" method="post" action="https://ybeoioh0m7.execute-api.us-east-2.amazonaws.com/dev/contacts">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <input name="permalink" class="email input-standard-grey" placeholder="Website URL" type="text">
