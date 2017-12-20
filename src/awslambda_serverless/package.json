@@ -1,0 +1,20 @@
+{
+  "name": "awslambda_serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Buddhi Eashwarage",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-dynamodb-local": "^0.2.26",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.171.0",
+    "query-string": "^5.0.1",
+    "serverless-offline": "^3.16.0"
+  }
+}
