@@ -20,7 +20,7 @@ $(function () {
 
     });
 
-    $('.contact-form').on("submit", function (event) {
+    /*$('.contact-form').on("submit", function (event) {
 
         // Stop form from submitting normally
         event.preventDefault();
@@ -44,7 +44,7 @@ $(function () {
             $form.html('<h4>Thank you for subscription!</h4>').fadeTo(300, 1);
         });
 
-    });
+    });*/
 
 });
 
