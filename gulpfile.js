@@ -11,6 +11,7 @@ var minifyjs = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minify_css = require('gulp-clean-css');
 var imagewebp = require('gulp-webp');
+var runSequence = require('run-sequence');
 
 /*===========Compile SCSS==============*/
 
@@ -109,7 +110,7 @@ var browserSync = require('browser-sync');
 gulp.task('browserSync', function() {
     browserSync({
         server: {
-            baseDir: '.'
+            baseDir: 'src'
         }
     })
 })
@@ -340,18 +341,14 @@ gulp.task('nunjucks_dist', function() {
 
 /*=============Join tasks==============*/
 
-var runSequence = require('run-sequence');
-
 gulp.task('default', function(callback) {
-    runSequence(['compressingtowebp', 'sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch'],
-        callback
+    runSequence('compressingtowebp', 'sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch',
     )
 })
 
 gulp.task('build', function(callback) {
     runSequence(
         //'clean:dist',
-        ['compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml'],
-        callback
+        'compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml',
     )
 })
