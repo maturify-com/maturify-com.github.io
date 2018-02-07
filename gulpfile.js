@@ -290,17 +290,17 @@ gulp.task('fonts', function() {
 
 /*=============Auto-deleting temporary files==============*/
 
-var del = require('del');
+// var del = require('del');
 
-gulp.task('clean:dist', function(callback){
-    del(['dist/**/*', '!dist/images', '!dist/images/**/*'], callback)
-});
+// gulp.task('clean:dist', function(callback){
+//     del(['dist/**/*', '!dist/images', '!dist/images/**/*'], callback)
+// });
 
 
-gulp.task('clean', function(callback) {
-    del('dist');
-    return cache.clearAll(callback);
-})
+// gulp.task('clean', function(callback) {
+//     del('dist');
+//     return cache.clearAll(callback);
+// })
 
 
 
@@ -348,7 +348,6 @@ gulp.task('default', function(callback) {
 
 gulp.task('build', function(callback) {
     runSequence(
-        //'clean:dist',
         'compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml',
     )
 })
