@@ -1,0 +1,282 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+
+<div class="content-wrapper">
+
+    <!-- Product description ver3 -->
+    <div class="container">
+        <div class="row pt200 pb360">
+
+            <div class="product-description-ver3">
+
+                <div class="col-lg-12">
+                    <div class="heading align-center">
+                        <h4 class="h1 heading-title">Automagical Learning Management</h4>
+                        <div class="heading-line">
+                            <span class="short-line"></span>
+                            <span class="long-line"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="product-description-ver3-thumb">
+                        <img src="img/webp/maturify/team-progress.webp" alt="mac-book">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End Product description ver3 -->
+
+    <div class="container-fluid">
+        <div class="row pt400 pb120 bg-border-color">
+
+            <div class="container">
+
+
+                <div class="row align-center">
+
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="heading">
+
+                            <h5 class="mb30">Traditional knowledge repositories such as wikis are just passive stores.
+                                Use Maturify to put your knowledge in to real work!
+                            </h5>
+
+                            <p>As your business grows, we end up with large number of learning artifacts as documents.
+                                Still our employees have no guidance or incentive to those important business knowledge. 
+                                Maturify is an intelligent knowledge management system which guides,follows-up and rewards 
+                                employees in their learning.
+                            </p>
+
+                        </div>
+
+                        <div class="likes-block">
+
+                            <div class="btn btn-medium btn--dark btn-hover-shadow">
+                                <span class="text">Get Started</span>
+                                <span class="semicircle"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Product Description challenge -->
+    <div class="container">
+        <div class="row pt120 pb30">
+            <div class="col-lg-12">
+
+                <div class="product-description-challenge">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                            <div class="product-description-thumb">
+                                <img src="img/webp/solutions.webp" alt="solution" class="shadow-image">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="product-description-content">
+                                <div class="heading">
+                                    <h4 class="h1 heading-title">Automagical Knowledge Balancing</h4>
+                                    <div class="heading-line">
+                                        <span class="short-line"></span>
+                                        <span class="long-line"></span>
+                                    </div>
+                                    <p>In modern business work is always a team play. Such cross deciplinary teams require 
+                                        rounded-off knowledge and competencies. Maturify intelligently watches your teams to
+                                        maintain a healthy knowledge profile.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-description-border"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Description challenge -->
+
+    <!-- Product Description solution -->
+    <div class="container">
+        <div class="row pt80 pb120">
+            <div class="col-lg-12">
+
+                <div class="product-description-solution">
+
+                    <div class="row">
+
+                        <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                            <div class="product-description-content">
+                                <div class="heading">
+                                    <h4 class="h1 heading-title">Automagical Continuous Development</h4>
+                                    <div class="heading-line">
+                                        <span class="short-line"></span>
+                                        <span class="long-line"></span>
+                                    </div>
+
+                                    <p>Continuous professional development is important for knowledge workers. Maturify intelligently 
+                                        propose new knowledge areas for employees to work upon. This is highly useful to new employees to 
+                                        fast gain critical business knowledge.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                            <div class="product-description-thumb">
+                                <img src="img/webp/product-solution.webp" alt="challenge" class="shadow-image">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="product-description-border"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Description solution -->
+
+
+    <!-- Product Description challenge -->
+    <div class="container">
+        <div class="row pt120 pb30">
+            <div class="col-lg-12">
+
+                <div class="product-description-challenge">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                            <div class="product-description-thumb">
+                                <img src="img/webp/solutions.webp" alt="solution" class="shadow-image">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="product-description-content">
+                                <div class="heading">
+                                    <h4 class="h1 heading-title">Automagical Gaming Intelligence</h4>
+                                    <div class="heading-line">
+                                        <span class="short-line"></span>
+                                        <span class="long-line"></span>
+                                    </div>
+                                    <p>Consectetuer adipiscing elit, sed diam nonummy nibham liber tempor cum
+                                        soluta nobis. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit
+                                        litterarum formas humanitatis per seacula.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-description-border"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Description challenge -->
+    <!-- Seo Results ver2 -->
+    <div class="container-fluid">
+        <div class="row medium-padding120 bg-border-color">
+            <div class="container">
+                <div class="seo-results-ver2">
+                    <div class="row pb120">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="seo-results-content">
+                                <div class="heading">
+                                    <h4 class="h1 heading-title">The Result of Our Work</h4>
+                                    <div class="heading-line">
+                                        <span class="short-line"></span>
+                                        <span class="long-line"></span>
+                                    </div>
+                                    <p>Qolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibham
+                                        liber tempor cum soluta nobis <span class="c-dark">eleifend option congue nihil uarta</span>
+                                        decima et quinta. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                                        suscipit lobortis.
+                                    </p>
+                                </div>
+
+                                <ul class="list list--secondary">
+                                    <li>
+                                        <i class="seoicon-check"></i>
+                                        <a href="#">Euismod tincidunt ut laoreet dolore;</a>
+                                    </li>
+                                    <li>
+                                        <i class="seoicon-check"></i>
+                                        <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed nonummy;</a>
+                                    </li>
+                                    <li>
+                                        <i class="seoicon-check"></i>
+                                        <a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum,
+                                            anteposuerit litterarum formas duis dolore.
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                            <div class="seo-results-thumb">
+                                <img src="img/webp/results-ver2.webp" alt="results">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="results">
+                                <div class="results-item">
+                                    <i class="seoicon-hit-target "></i>
+                                    <div class="results-item-info">
+                                        0.09% CTR
+                                    </div>
+                                </div>
+                                <div class="results-item">
+                                    <i class=" seoicon-coins"></i>
+                                    <div class="results-item-info">
+                                        20% less CPA
+                                    </div>
+                                </div>
+                                <div class="results-item">
+                                    <i class="seoicon-target-search"></i>
+                                    <div class="results-item-info">
+                                        272% ROI
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Seo Results ver2 -->
+
+</div>
+{% endblock %}
