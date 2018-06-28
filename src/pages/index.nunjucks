@@ -305,10 +305,8 @@
                             set of dynamic assets to build your people and gain an unfair competitive advantage.
                         </div>
 
-                        <div class="btn btn-medium btn--blue btn-hover-shadow mt30">
-                            <a href="https://app.maturify.com/register" class="text">Sign Up Now </a>
-                            <span class="semicircle"></span>
-                        </div>
+                        <a href="https://app.maturify.com/register" class="btn btn-medium btn--blue btn-hover-shadow mt30">Sign Up Now </a>
+                        <span class="semicircle"></span>
 
                     </div>
 
