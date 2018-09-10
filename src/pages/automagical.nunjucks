@@ -24,7 +24,7 @@
 
                 <div class="col-lg-12">
                     <div class="product-description-ver3-thumb">
-                        <img src="img/webp/maturify/team-progress.webp" alt="mac-book">
+                        <img src="img/maturify/team-progress.png" alt="mac-book">
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                             <div class="product-description-thumb">
-                                <img src="img/webp/solutions.webp" alt="solution" class="shadow-image">
+                                <img src="img/solutions.jpg" alt="solution" class="shadow-image">
                             </div>
                         </div>
 
@@ -145,7 +145,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                             <div class="product-description-thumb">
-                                <img src="img/webp/product-solution.webp" alt="challenge" class="shadow-image">
+                                <img src="img/product-solution.png" alt="challenge" class="shadow-image">
                             </div>
                         </div>
 
@@ -173,7 +173,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                             <div class="product-description-thumb">
-                                <img src="img/webp/solutions.webp" alt="solution" class="shadow-image">
+                                <img src="img/solutions.jpg" alt="solution" class="shadow-image">
                             </div>
                         </div>
 
@@ -243,7 +243,7 @@
 
                         <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
                             <div class="seo-results-thumb">
-                                <img src="img/webp/results-ver2.webp" alt="results">
+                                <img src="img/results-ver2.png" alt="results">
                             </div>
                         </div>
                     </div>

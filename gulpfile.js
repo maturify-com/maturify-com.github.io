@@ -264,16 +264,17 @@ gulp.task('compress', function() {
 
 /*===========Minimization IMAGE to WEBP Format==============*/
 
-gulp.task('compressingtowebp', function() {
-    gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
-        .pipe(imagewebp())
-        .pipe(gulp.dest('src/img/webp'));
-});
+// gulp.task('compressingtowebp', function() {
+//     gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+//         .pipe(imagewebp())
+//         .pipe(gulp.dest('src/img/webp'));
+// });
 
-gulp.task('webpimg_copytodest', function() {
-    gulp.src('src/img/webp/**/*')
-        .pipe(gulp.dest('img/webp'));
-});
+// gulp.task('webpimg_copytodest', function() {
+//     gulp.src('src/img/webp/**/*')
+//         .pipe(gulp.dest('img/webp'));
+// });
+/*===========Copy svg images to destination==============*/
 
 gulp.task('svg_copytodest', function() {
     gulp.src('src/svg/**/*')
@@ -342,12 +343,12 @@ gulp.task('nunjucks_dist', function() {
 /*=============Join tasks==============*/
 
 gulp.task('default', function(callback) {
-    runSequence('compressingtowebp', 'sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch',
+    runSequence('sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch',
     )
 })
 
 gulp.task('build', function(callback) {
     runSequence(
-        'compressingtowebp', 'webpimg_copytodest', 'svg_copytodest', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml',
+        'svg_copytodest', 'images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml',
     )
 })
