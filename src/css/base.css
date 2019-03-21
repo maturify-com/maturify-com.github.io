@@ -564,6 +564,12 @@ input {
     .pt80 {
       padding-top: 85px; } }
 
+.pt30 {
+  padding-top: 30px; }
+  @media (max-width: 800px) {
+    .pt30 {
+      padding-top: 35px; } }
+
 .pt100 {
   padding-top: 100px; }
   @media (max-width: 800px) {
