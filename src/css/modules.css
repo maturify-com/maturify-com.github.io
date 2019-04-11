@@ -1950,7 +1950,8 @@
   .pricing-tables-item .pricing-title {
     font-size: 34px;
     margin-bottom: 11px;
-    display: block; }
+    display: block; 
+    color: #000000}
     @media (max-width: 980px) {
       .pricing-tables-item .pricing-title {
         font-size: 26px; } }
@@ -2282,6 +2283,12 @@
       color: #fff; }
     .footer .contacts .contacts-item .content .sub-title {
       opacity: .4; }
+    .title-new {
+      color: #fff;
+      font-size: x-large; }
+    .title-new2 {
+      color: #000000;
+      font-size: x-large; }
   .footer a {
     color: rgba(255, 255, 255, 0.35);
     transition: all .3s ease; }
@@ -2789,7 +2796,8 @@ textarea {
 
 .contact-form {
   margin-top: 30px;
-  position: relative; }
+  position: relative; 
+  width: 75%; }
   .contact-form abbr {
     text-decoration: none; }
   .contact-form .checked {
