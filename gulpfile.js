@@ -310,7 +310,7 @@ gulp.task('fonts', function() {
 /*============= Dev files ==============*/
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('src/pages/**/*.+(html|nunjucks)')
+  return gulp.src('src/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
   .pipe(nunjucksRender({
       path: ['src/templates']
@@ -323,7 +323,7 @@ gulp.task('nunjucks', function() {
 
 gulp.task('nunjucks_dist', function() {
     // Gets .html and .nunjucks files in pages
-    return gulp.src('src/pages/**/*.+(html|nunjucks)')
+    return gulp.src('src/**/*.+(html|nunjucks)')
     // Renders template with nunjucks
     .pipe(nunjucksRender({
         path: ['src/templates']
@@ -343,7 +343,7 @@ gulp.task('nunjucks_dist', function() {
 /*=============Join tasks==============*/
 
 gulp.task('default', function(callback) {
-    runSequence('sass', 'minifyjs', 'concat', 'nunjucks', 'browserSync', 'watch',
+    runSequence('sass', 'minifyjs', 'minify_css', 'concat', 'nunjucks', 'watch',
     )
 })
 
