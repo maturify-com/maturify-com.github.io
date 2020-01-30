@@ -2061,7 +2061,7 @@ textarea {
 
 /*------------- #styled_selects --------------*/
 .nice-select {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 20px 40px 20px 20px;
   border-color: transparent;
   transition: all .3s ease;
