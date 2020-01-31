@@ -15,6 +15,7 @@ _Feature branch_
     - The type of action you would be doing in the branch
         * ENH -- Enhancement
         * FTR -- New Feature
+        * BUG -- Bug
     - A brief description of the task
     - The task ID
   eg:- `ENH-Your_Description-#1`
