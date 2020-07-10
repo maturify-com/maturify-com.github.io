@@ -4,7 +4,7 @@
   "description": "HTML-template",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "scripts"
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -56,5 +56,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-line-ending-corrector": "^1.0.1",
     "gulp-uglify": "^3.0.0"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   }
 }
