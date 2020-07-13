@@ -11,109 +11,109 @@ var minifyjs = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minify_css = require('gulp-clean-css');
 var imagewebp = require('gulp-webp');
-var runSequence = require('run-sequence');
+var runSequence = require('gulp4-run-sequence');
+var browserSync = require('browser-sync').create();
 
 /*===========Compile SCSS==============*/
 
 var sass = require('gulp-sass');
 var lec = require('gulp-line-ending-corrector')
 
-gulp.task('sass', function() {
+gulp.task('sass', (done) => {
 
-    gulp.src('src/sass/base/*.scss').pipe(lec())
+    gulp.src('src/sass/base/*.scss').pipe(lec(), { allowEmpty: true })
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('src/sass/blocks/*.scss').pipe(lec())
+    gulp.src('src/sass/blocks/*.scss').pipe(lec(), { allowEmpty: true })
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('src/sass/layouts/*.scss').pipe(lec())
+    gulp.src('src/sass/layouts/*.scss').pipe(lec(), { allowEmpty: true })
         .pipe(sass())
         .pipe(gulp.dest('css'));
 
-    gulp.src('src/sass/modules/*.scss').pipe(lec())
+    gulp.src('src/sass/modules/*.scss').pipe(lec(), { allowEmpty: true })
         .pipe(sass())
         .pipe(gulp.dest('css'));
-    
-    gulp.src('src/sass/widgets/*.scss').pipe(lec())
+
+    gulp.src('src/sass/widgets/*.scss').pipe(lec(), { allowEmpty: true })
         .pipe(sass())
         .pipe(gulp.dest('css'))
 
         .pipe(plumber())
-        .pipe(sass({errLogToConsole: true}))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(sass({ errLogToConsole: true }))
+        .pipe(browserSync.stream());
+    done();
 
 });
 
 /* =========Minify JS ========== */
 
-gulp.task('minifyjs', function(){
+gulp.task('minifyjs', function () {
     return gulp.src(['src/js/jquery-2.1.4.min.js',
-                     'src/js/crum-mega-menu.js',
-                     'src/js/swiper.jquery.min.js',
-                     'src/js/theme-plugins.js',
-                     'src/js/main.js',
-                     'src/js/form-actions.js',
-                     'src/js/velocity.min.js',
-                     'src/js/ScrollMagic.min.js',
-                     'src/js/animation.velocity.min.js'
-                    ])
-    .pipe(uglify())
-    .pipe(gulp.dest('src/js/minified'))
+        'src/js/crum-mega-menu.js',
+        'src/js/swiper.jquery.min.js',
+        'src/js/theme-plugins.js',
+        'src/js/main.js',
+        'src/js/form-actions.js',
+        'src/js/velocity.min.js',
+        'src/js/ScrollMagic.min.js',
+        'src/js/animation.velocity.min.js'
+    ], { allowEmpty: true })
+        .pipe(uglify())
+        .pipe(gulp.dest('src/js/minified'))
 });
 
 /* =========Combine JS ========== */
 
 /*Dev Files*/
-gulp.task('concat', function() {
+gulp.task('concat', function () {
     return gulp.src(['src/js/minified/jquery-2.1.4.min.js',
-                    'src/js/minified/crum-mega-menu.js',
-                    'src/js/minified/swiper.jquery.min.js',
-                    'src/js/minified/theme-plugins.js',
-                    'src/js/minified/main.js',
-                    'src/js/minified/form-actions.js',
-                    'src/js/minified/velocity.min.js',
-                    'src/js/minified/ScrollMagic.min.js',
-                    'src/js/minified/animation.velocity.min.js'
-                    ])
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('src/js/combined'))
+        'src/js/minified/crum-mega-menu.js',
+        'src/js/minified/swiper.jquery.min.js',
+        'src/js/minified/theme-plugins.js',
+        'src/js/minified/main.js',
+        'src/js/minified/form-actions.js',
+        'src/js/minified/velocity.min.js',
+        'src/js/minified/ScrollMagic.min.js',
+        'src/js/minified/animation.velocity.min.js'
+    ], { allowEmpty: true })
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('src/js/combined'))
 });
 
 /*Prod Files*/
-gulp.task('concat_dist', function() {
-    return gulp.src('src/js/combined/**/*')
-    .pipe(gulp.dest('js/combined'))
-});
-
-/*===========Watch==============*/
-
-
-gulp.task('watch', ['browserSync', 'sass'], function (){
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/templates/**/*.nunjucks', ['nunjucks']);
-    gulp.watch('src/pages/**/*.nunjucks', ['nunjucks']);
-    gulp.watch('src/*.html', browserSync.reload);
-    gulp.watch('src/js/**/*.js', browserSync.reload);
-
-    // others
+gulp.task('concat_dist', function () {
+    return gulp.src('src/js/combined/**/*', { allowEmpty: true })
+        .pipe(gulp.dest('js/combined'))
 });
 
 
 /*===========ON-Line synchronization from browsers==============*/
 
-var browserSync = require('browser-sync');
 
-gulp.task('browserSync', function() {
-    browserSync({
+gulp.task('browserSync', function () {
+    browserSync.init({
         server: {
             baseDir: 'src'
         }
     })
-})
+});
+
+
+/*===========Watch==============*/
+
+
+gulp.task('watch', gulp.series('browserSync', 'sass', () => {
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/templates/**/*.nunjucks', ['nunjucks']);
+    gulp.watch('src/pages/**/*.nunjucks', ['nunjucks']);
+    gulp.watch('src/*.html').on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+
+    // others
+}));
 
 
 /*===========Join files==============*/
@@ -121,10 +121,10 @@ gulp.task('browserSync', function() {
 
 var useref = require('gulp-useref');
 
-gulp.task('useref', function(){
+gulp.task('useref', function () {
     var assets = useref.assets();
 
-    return gulp.src('*.html')
+    return gulp.src('*.html', { allowEmpty: true })
         .pipe(assets)
         .pipe(assets.restore())
         .pipe(useref())
@@ -134,10 +134,10 @@ gulp.task('useref', function(){
 
 var uglify = require('gulp-uglify');
 
-gulp.task('useref', function(){
+gulp.task('useref', function () {
     var assets = useref.assets();
 
-    return gulp.src('*.html')
+    return gulp.src('*.html', { allowEmpty: true })
         .pipe(assets)
         .pipe(uglify())
         .pipe(assets.restore())
@@ -170,10 +170,10 @@ gulp.task('useref', function(){
 
 var gulpIf = require('gulp-if');
 
-gulp.task('useref', function(){
+gulp.task('useref', function () {
     var assets = useref.assets();
 
-    return gulp.src('*.html')
+    return gulp.src('*.html', { allowEmpty: true })
         .pipe(assets)
         .pipe(gulpIf('*.js', uglify()))
         .pipe(assets.restore())
@@ -183,25 +183,25 @@ gulp.task('useref', function(){
 
 /*===========Minify CSS Dev==============*/
 
-gulp.task('minify_css', function(){
+gulp.task('minify_css', function () {
     return gulp.src(['src/css/fonts.css',
-                     'src/css/crumina-fonts.css',
-                     'src/css/normalize.css',
-                     'src/css/grid.css',
-                     'src/css/base.css',
-                     'src/css/blocks.css',
-                     'src/css/layouts.css',
-                     'src/css/modules.css',
-                     'src/css/widgets-styles.css',
-                     'src/css/jquery.mCustomScrollbar.min.css',
-                     'src/css/swiper.min.css',
-                     'src/src/css/primary-menu.css',
-                     'src/css/magnific-popup.css',
-                     'src/fonts/**/*'
-                    ])
-    .pipe(gulpIf('*.css', minify_css()))                
-    .pipe(gulp.dest('src/css/minified/'))
-    .pipe(gulpIf('!*.css', gulp.dest('src/css/fonts/')))
+        'src/css/crumina-fonts.css',
+        'src/css/normalize.css',
+        'src/css/grid.css',
+        'src/css/base.css',
+        'src/css/blocks.css',
+        'src/css/layouts.css',
+        'src/css/modules.css',
+        'src/css/widgets-styles.css',
+        'src/css/jquery.mCustomScrollbar.min.css',
+        'src/css/swiper.min.css',
+        'src/src/css/primary-menu.css',
+        'src/css/magnific-popup.css',
+        'src/fonts/**/*'
+    ], { allowEmpty: true })
+        .pipe(gulpIf('*.css', minify_css()))
+        .pipe(gulp.dest('src/css/minified/'))
+        .pipe(gulpIf('!*.css', gulp.dest('src/css/fonts/')))
 })
 
 /*===========Minify CSS Prod ==============*/
@@ -221,16 +221,16 @@ gulp.task('useref', function(){
         .pipe(gulp.dest('dist'))
 });*/
 
-gulp.task('minify_css_dist', function(){
-    return gulp.src('src/css/minified/**/*')
-    .pipe(gulp.dest('css/minified/'))
+gulp.task('minify_css_dist', function () {
+    return gulp.src('src/css/minified/**/*', { allowEmpty: true })
+        .pipe(gulp.dest('css/minified/'))
 })
 
 
 /*==================Copy minified relevant fonts=========================*/
-gulp.task('minify_css_fonts_dist', function(){
-    return gulp.src('src/css/fonts/**/*')
-    .pipe(gulp.dest('css/fonts/'))
+gulp.task('minify_css_fonts_dist', function () {
+    return gulp.src('src/css/fonts/**/*', { allowEmpty: true })
+        .pipe(gulp.dest('css/fonts/'))
 })
 
 
@@ -239,16 +239,16 @@ gulp.task('minify_css_fonts_dist', function(){
 
 var imagemin = require('gulp-imagemin');
 
-gulp.task('images', function(){
-    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+gulp.task('images', function () {
+    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)', { allowEmpty: true })
         .pipe(imagemin())
         .pipe(gulp.dest('img'))
 });
 
 var cache = require('gulp-cache');
 
-gulp.task('images', function(){
-    return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+gulp.task('images', function () {
+    return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)', { allowEmpty: true })
         .pipe(cache(imagemin({
             interlaced: true
         })))
@@ -256,8 +256,8 @@ gulp.task('images', function(){
 });
 
 
-gulp.task('compress', function() {
-    gulp.src('src/img/*')
+gulp.task('compress', function () {
+    gulp.src('src/img/*', { allowEmpty: true })
         .pipe(imagemin())
         .pipe(gulp.dest('img'));
 });
@@ -276,15 +276,16 @@ gulp.task('compress', function() {
 // });
 /*===========Copy svg images to destination==============*/
 
-gulp.task('svg_copytodest', function() {
-    gulp.src('src/svg/**/*')
+gulp.task('svg_copytodest', (done) => {
+    gulp.src('src/svg/**/*', { allowEmpty: true })
         .pipe(gulp.dest('svg/'));
+    done();
 });
 
 /*=============Copy Fonts==============*/
 
-gulp.task('fonts', function() {
-    return gulp.src('src/fonts/**/*')
+gulp.task('fonts', function () {
+    return gulp.src('src/fonts/**/*', { allowEmpty: true })
         .pipe(gulp.dest('fonts'))
 })
 
@@ -308,47 +309,49 @@ gulp.task('fonts', function() {
 /*============= nunjucks templates ==============*/
 
 /*============= Dev files ==============*/
-gulp.task('nunjucks', function() {
-  // Gets .html and .nunjucks files in pages
-  return gulp.src('src/**/*.+(html|nunjucks)')
-  // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: ['src/templates']
-    }))
-  // output files in app folder
-  .pipe(gulp.dest('src/'))
+gulp.task('nunjucks', function () {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('src/**/*.+(html|nunjucks)', { allowEmpty: true })
+        // Renders template with nunjucks
+        .pipe(nunjucksRender({
+            path: ['src/templates']
+        }))
+        // output files in app folder
+        .pipe(gulp.dest('src/'))
 });
 
 /*============= Prod files ==============*/
 
-gulp.task('nunjucks_dist', function() {
+gulp.task('nunjucks_dist', function () {
     // Gets .html and .nunjucks files in pages
-    return gulp.src('src/**/*.+(html|nunjucks)')
-    // Renders template with nunjucks
-    .pipe(nunjucksRender({
-        path: ['src/templates']
-      }))
-    // output files in app folder
-    .pipe(gulp.dest('.'))
-  });
+    return gulp.src('src/**/*.+(html|nunjucks)', { allowEmpty: true })
+        // Renders template with nunjucks
+        .pipe(nunjucksRender({
+            path: ['src/templates']
+        }))
+        // output files in app folder
+        .pipe(gulp.dest('.'))
+});
 
-  var htmlmin = require('gulp-htmlmin');
+var htmlmin = require('gulp-htmlmin');
 
-  gulp.task('minifyhtml', function() {
-    return gulp.src('*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('.'))
-  })
+gulp.task('minifyhtml', function () {
+    return gulp.src('*.html', { allowEmpty: true })
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('.'))
+})
 
 /*=============Join tasks==============*/
 
-gulp.task('default', function(callback) {
+gulp.task('default', (done) => {
     runSequence('sass', 'minifyjs', 'minify_css', 'concat', 'nunjucks', 'watch',
-    )
+    );
+    done();
 })
 
-gulp.task('build', function(callback) {
+gulp.task('build', (done) => {
     runSequence(
         'svg_copytodest', 'images', 'fonts', 'sass', 'minify_css_dist', 'minify_css_fonts_dist', 'minifyjs', 'concat', 'concat_dist', 'nunjucks_dist', 'minifyhtml',
-    )
+    );
+    done();
 })
