@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "HTML-template",
   "main": "gulpfile.js",
-  "scripts": {
-    "preinstall": "npx npm-force-resolutions"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "Seosight"
@@ -23,7 +21,7 @@
     "coffee-script": "^1.12.2",
     "del": "^2.2.1",
     "fixmyjs": "^1.0.3",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^2.4.0",
@@ -55,9 +53,8 @@
     "del": "^2.2.2",
     "gulp-concat": "^2.6.1",
     "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-uglify": "^3.0.0"
-  },
-  "resolutions": {
-    "graceful-fs": "4.2.3"
+    "gulp-uglify": "^3.0.0",
+    "gulp4-run-sequence": "^1.0.1",
+    "save": "^2.4.0"
   }
 }
