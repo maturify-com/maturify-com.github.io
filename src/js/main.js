@@ -42,8 +42,8 @@ var CRUMINA = {};
                 "tolerance": 5,
                 "classes": {
                     "initial": "animated",
-                    "pinned": "swingInX",
-                    "unpinned": "swingOutX"
+                    // "pinned": "swingInX",
+                    // "unpinned": "swingOutX"
                 }
             }
         );

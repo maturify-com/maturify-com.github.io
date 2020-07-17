@@ -98,9 +98,9 @@
     .header {
       position: relative; } }
   .header .logo {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     margin-right: 82px;
-    padding-top: 5px;
+    padding-top: 0px;
     float: left; }
     @media (max-width: 768px) {
       .header .logo {
@@ -118,7 +118,7 @@
     position: absolute; }
   .header nav {
     float: right;
-    padding: 14px 0; }
+    padding: 5px 0; }
     .header nav .menu {
       display: inline-block; }
       .header nav .menu .menu-item {
@@ -358,7 +358,7 @@
   100% {
     width: 80%; } }
 
-/*================= Styles for sticky-Header =========*/
+/*================= Styles for sticky-Header =========
 .animated {
   -webkit-animation-duration: .5s;
   -moz-animation-duration: .5s;
@@ -741,7 +741,7 @@
   @media (max-width: 480px) {
     .animated.bounceOutUp {
       animation-name: none;
-      transform-origin: unset; } }
+      transform-origin: unset; } }*/
 
 /*------------- #SLIDERS --------------*/
 .main-slider {
@@ -2233,7 +2233,7 @@
     .footer {
       padding-top: 40px; } }
   .footer .info {
-    padding-bottom: 110px;
+    padding-bottom: 40px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     overflow: hidden; }
     @media (max-width: 1024px) {
@@ -2296,7 +2296,8 @@
       color: #4cc2c0; }
   .footer .sub-footer {
     background-color: #121111;
-    padding: 60px 0;
+    padding: 35px 0;
+    padding-top: 30px;
     position: relative; }
     @media (max-width: 768px) {
       .footer .sub-footer {
