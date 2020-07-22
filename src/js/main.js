@@ -41,9 +41,10 @@ var CRUMINA = {};
                 "offset": 210,
                 "tolerance": 5,
                 "classes": {
-                    "initial": "animated",
-                    // "pinned": "swingInX",
-                    // "unpinned": "swingOutX"
+                    "initial": "animated"
+                    /* Nav bar hidden when scrolling disabled */
+                    //"pinned": "swingInX",
+                    //"unpinned": "swingOutX"  
                 }
             }
         );
