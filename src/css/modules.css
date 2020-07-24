@@ -43,7 +43,7 @@
   .heading .heading-subtitle {
     margin-bottom: 15px; }
   .heading p {
-    margin-bottom: 30px; }
+    margin-bottom: -3px; }
   .heading .heading-text {
     font-size: 24px;
     line-height: 30px;
@@ -1914,7 +1914,7 @@
   box-shadow: 0 14px 32px 10px rgba(0, 0, 0, 0.2);
   margin: 0 15px;
   border-radius: 10px;
-  padding: 40px 0; }
+  padding: 5px 0; }
   .pricing-tables .pricing-tables-wrap :nth-child(4) .pricing-tables-item .dots {
     display: none; }
 
