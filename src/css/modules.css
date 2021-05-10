@@ -1915,8 +1915,15 @@
   margin: 0 15px;
   border-radius: 10px;
   padding: 40px 0; }
-  .pricing-tables .pricing-tables-wrap :nth-child(4) .pricing-tables-item .dots {
-    display: none; }
+.pricing-tables .pricing-tables-wrap :nth-child(4) .pricing-tables-item .dots {
+  display: none; }
+.pricing-tables .pricing-tables-wrap .pricing-overall-note {
+  text-align: center;
+}
+.contact-us-button {
+  display: flex;
+  justify-content: center;
+}
 
 .pricing-tables-item {
   text-align: center;
@@ -1928,6 +1935,9 @@
   @media (max-width: 570px) {
     .pricing-tables-item {
       margin-bottom: 30px; } }
+  .pricing-tables-item .pricing-note {
+    font-size: small;    
+  }
   .pricing-tables-item:hover .btn {
     background-color: #4cc2c0;
     color: #f7f9f9; }
@@ -1970,7 +1980,7 @@
   .pricing-tables-item .rate {
     font-size: 24px;
     color: #4cc2c0;
-    margin-bottom: 31px; }
+  }
     @media (max-width: 381px) {
       .pricing-tables-item .rate {
         margin-bottom: 10px;

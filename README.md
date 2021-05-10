@@ -2,7 +2,9 @@
 This repository is for managing the Maturify marketing website.
 
 ## Pre-Requisites
-Install gulp : `npm install --global gulp-cli`
+- Currently we need Node version **v12.18.2** in order to run `gulp build` without an issue. So if you have higher version, ensure you downgrade to this version before running the following commands
+- Install gulp : `npm install --global gulp-cli`
+- Run `npm install` to install all the required packages
 
 ### Testing Purposes
 Run the general gulp command `gulp` and by navigating to [localhost:3000](http://localhost:3000/) in the browser (it should automatically open in the browser once the command is run).
