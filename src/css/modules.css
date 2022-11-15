@@ -6201,13 +6201,36 @@ Main Components
   }
 }
 
-/*------------- #PRIVACY POLICY --------------*/
-.privacy-policy > div > h2 {
-  padding-top: 1em;
+/*------------- #POLICIES --------------*/
+.privacy-policy > .row > div {
+  padding: 0.5em;
 }
 
 .privacy-policy > div > ul > li {
   padding-bottom: 1em;
+}
+
+.privacy-policy > div > h4 {
+  margin-top: 1em;
+}
+
+.privacy-policy > div > h5 {
+  margin-top: 1em;
+}
+
+.privacy-policy > .row > table {
+  border: none;
+}
+
+.privacy-policy > .row > table > thead {
+  font-weight: 600;
+  background: #ebebeb;
+  height: 3em;
+}
+
+.privacy-policy > .row > table > tbody > tr > td {
+  padding-bottom: 2em;
+  vertical-align: top;
 }
 
 .terms-and-conditions > div > h2 {
