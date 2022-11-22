@@ -15,7 +15,7 @@
   "author": "Crumina",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "coffee": "^3.3.0",
     "coffee-gulp": "0.0.2",
     "coffee-script": "^1.12.2",
